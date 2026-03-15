@@ -17,11 +17,13 @@ jobs:
 
      - name: Run UI tests
        run: npm run tests:ui -- --reporter=html
-       env: PLAYWRIGHT_HTML_REPORT: playwright-report-ui
+       env:
+        PLAYWRIGHT_HTML_REPORT: playwright-report-ui
 
      - name: Run API tests
        run: npm run tests:api -- --reporter=html
-       env: PLAYWRIGHT_HTML_REPORT: playwright-report-api
+       env: 
+        PLAYWRIGHT_HTML_REPORT: playwright-report-api
 
      - name: Upload UI test report
        if: always()
